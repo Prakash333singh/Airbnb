@@ -30,7 +30,7 @@ export const verifyUser = (req, res, next) => {
     } else {
       return res
         .status(401)
-        .json({ sucess: false, message: "you are not authenticated" });
+        .json({ sucess: false, message: "you are not authenticated as user" });
     }
   });
 };
@@ -42,7 +42,7 @@ export const verifyAdmin = (req, res, next) => {
     } else {
       return res
         .status(401)
-        .json({ sucess: false, message: "you are not authenticated" });
+        .json({ sucess: false, message: "you are not authenticated as admin" });
     }
   });
 };
